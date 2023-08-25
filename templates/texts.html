@@ -1,109 +1,77 @@
 {% extends "layout.html" %}
 
-<!DOCTYPE html>
 
-<html lang="en">
+{% block mobilemenu %}
+<ul class="navbar-nav">
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('index') }}">ABOUT</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('dev') }}">PROJECTS</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active">WRITINGS</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('more') }}">CONTACT</a>
+    </li>
+</ul>
+{% endblock %}
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-            crossorigin="anonymous"></script>
-        <link href="styles.css" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="scripts.js" defer></script>
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-        </style>
-        <link rel="icon" href="images/favicon.png" type="image/x-icon">
-        <title>Alex Arroyo</title>
-    </head>
+<!-- DESKTOP MENU -->
 
-    <body>
-        <header class="container mt-4 text-center">
-            <h1 class="title">ALEX ARROYO</h1>
-        </header>
-        <div class="custom-border"></div>
-        <div class="flex-wrapper">
 
-            <nav class="container text-center">
+{% block desktopmenu %}
+<!-- <li class="nav-item me-1"><a class="nav-link active" href="index.html">HOME</a></li> -->
+<li class="nav-item me-1"><a class="nav-link" href="{{ url_for('index') }}">ABOUT</a></li>
+<li class="nav-item me-1"><a class="nav-link" href="{{ url_for('dev') }}">PROJECTS</a></li>
+<!-- <li class="nav-item me-1"><a class="nav-link" href="art.html">ART</a></li> -->
+<li class="nav-item me-2"><a class="nav-link active">WRITINGS</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ url_for('more') }}">CONTACT</a></li>
+{% endblock %}
 
-                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarMenu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarMenu">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">ABOUT</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="dev.html">PROJECTS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active">WRITINGS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="more.html">CONTACT</a>
-                    </li>
-                </ul>
-            </div>
-
-                            <!-- DESKTOP MENU -->
-
-                            <ul  class="nav justify-content-center d-none d-lg-flex">
-                                <!-- <li class="nav-item me-1"><a class="nav-link active" href="index.html">HOME</a></li> -->
-                    <li class="nav-item me-1"><a class="nav-link" href="index.html">ABOUT</a></li>
-                    <li class="nav-item me-1"><a class="nav-link" href="dev.html">PROJECTS</a></li>
-                    <!-- <li class="nav-item me-1"><a class="nav-link" href="art.html">ART</a></li> -->
-                    <li class="nav-item me-2"><a class="nav-link active">WRITINGS</a></li>
-                    <li class="nav-item"><a class="nav-link" href="more.html">CONTACT</a></li>
-                </ul>
-            </nav>
-
-            <!-- <div class="terminal">
+{% block content %}
+<!-- <div class="terminal">
                 <p>Mediator between thoughts and machines.<span class="cursor">|</span></p>
             </div> -->
 
-            <div class="centered-box-win">
+<div class="centered-box-win">
 
-                <div class="box-header">
-                    Latest Articles
-                </div>
+    <div class="box-header">
+        Latest Articles
+    </div>
 
-                <div class="inner-text">
-                    <h3>Mastering VS Code: The Power of Keyboard Shortcuts
-                    </h3>
+    <div class="inner-text">
+        <h3>Mastering VS Code: The Power of Keyboard Shortcuts
+        </h3>
 
-                    <p class="pt-3">
-                        <a href="https://medium.com/@alexaldearroyo/mastering-vs-code-the-power-of-keyboard-shortcuts-8736ab081442" target="_blank">
-                            <span class="arrow">></span> Read on Medium</a>
-                    </p>
+        <p class="pt-3">
+            <a href="https://medium.com/@alexaldearroyo/mastering-vs-code-the-power-of-keyboard-shortcuts-8736ab081442"
+                target="_blank">
+                <span class="arrow">></span> Read on Medium</a>
+        </p>
 
-                </div>
+    </div>
 
-                <div class="inner-text">
-                    <h3>Learn How to Use Git & GitHub: A Guide for Absolute Beginners
-                    </h3>
+    <div class="inner-text">
+        <h3>Learn How to Use Git & GitHub: A Guide for Absolute Beginners
+        </h3>
 
-                    <p class="pt-3">
-                        <a href="https://medium.com/@alexaldearroyo/learn-how-to-ue-git-github-a-guide-for-absolute-beginners-a051f5ed7d63" target="_blank">
-                            <span class="arrow">></span> Read on Medium</a>
-                    </p>
+        <p class="pt-3">
+            <a href="https://medium.com/@alexaldearroyo/learn-how-to-ue-git-github-a-guide-for-absolute-beginners-a051f5ed7d63"
+                target="_blank">
+                <span class="arrow">></span> Read on Medium</a>
+        </p>
 
-                </div>
-            </div>
+    </div>
+</div>
 
-        </div>
+{% endblock %}
 
-        <footer>
-            <span>&copy; Alex Arroyo 2023</span>
-        </footer>
-    </body>
+<footer>
+    <span>&copy; Alex Arroyo 2023</span>
+</footer>
+</body>
 
 </html>

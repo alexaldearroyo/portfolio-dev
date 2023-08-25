@@ -1,20 +1,18 @@
 {% extends "layout.html" %}
 
-
 {% block mobilemenu %}
-
 <ul class="navbar-nav">
     <li class="nav-item">
         <a class="nav-link active">ABOUT</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="dev.html">PROJECTS</a>
+        <a class="nav-link" href="{{ url_for('dev') }}">PROJECTS</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="texts.html">WRITINGS</a>
+        <a class="nav-link" href="{{ url_for('texts') }}">WRITINGS</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="more.html">CONTACT</a>
+        <a class="nav-link" href="{{ url_for('more') }}">CONTACT</a>
     </li>
 </ul>
 {% endblock %}
@@ -22,10 +20,10 @@
 {% block desktopmenu %}
 <!-- <li class="nav-item me-1"><a class="nav-link active" href="index.html">HOME</a></li> -->
 <li class="nav-item me-1"><a class="nav-link active">ABOUT</a></li>
-<li class="nav-item me-1"><a class="nav-link" href="dev.html">PROJECTS</a></li>
+<li class="nav-item me-1"><a class="nav-link" href="{{ url_for('dev') }}">PROJECTS</a></li>
 <!-- <li class="nav-item me-1"><a class="nav-link" href="art.html">ART</a></li> -->
-<li class="nav-item me-2"><a class="nav-link" href="texts.html">WRITTINGS</a></li>
-<li class="nav-item"><a class="nav-link" href="more.html">CONTACT</a></li>
+<li class="nav-item me-2"><a class="nav-link" href="{{ url_for('texts') }}">WRITTINGS</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ url_for('more') }}">CONTACT</a></li>
 {% endblock %}
 
 {% block content %}

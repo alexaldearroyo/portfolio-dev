@@ -20,4 +20,8 @@ def more():
     return render_template('more.html')
 
 if __name__ == "__main__":
+     with app.test_request_context():
+        with open("output/index.html", "w") as f:
+            f.write(str(index()))
+            
     app.run()

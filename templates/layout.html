@@ -1,0 +1,66 @@
+<!-- Repeating code (template) -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" >
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="{{ url_for('static', filename='scripts.js') }}" defer></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+        </style>
+
+        <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/x-icon">
+
+        <title>Alex Arroyo</title>
+    </head>
+
+    <body>
+        <header class="container mt-4 text-center">
+            <h1 class="title">ALEX ARROYO</h1>
+        </header>
+        <div class="custom-border"></div>
+
+        <div class="flex-wrapper">
+
+            <nav class="container text-center">
+
+                <!-- MOBILE MENU -->
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse d-lg-none" id="navbarMenu">{% block mobilemenu %}
+                {% endblock %}
+                </div>
+
+                <!-- DESKTOP MENU -->
+
+                <ul  class="nav justify-content-center d-none d-lg-flex">
+                {% block desktopmenu %}
+                {% endblock %}
+                </ul>
+            </nav>
+
+            <div>   
+            {% block content %}
+            {% endblock %}
+            </div>
+        
+        <footer>
+            <span>&copy; Alex Arroyo 2023</span>
+        </footer>
+    </body>
+
+</html>

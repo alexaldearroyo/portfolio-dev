@@ -1,3 +1,208 @@
+// src/pages/_app.jsx:
+
+import React from "react";
+import Layout from "../components/Layout";
+import Header from "../components/Header";
+import "./styles.css";
+
+import "./google-fonts.css";
+
+// Importa otros componentes de diseño aquí, si los tienes.
+
+function MyApp({ Component, pageProps }) {
+  return (
+    <>
+      <Header />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </>
+  );
+}
+
+export default MyApp;
+
+----------------------------------------
+
+// src/pages/index.jsx:
+
+import React from 'react';
+// import './styles.css';
+
+const HomePage = () => {
+    // Tu contenido de la página de inicio aquí
+    return (
+        <div>
+            <h1>Mi página de inicio</h1>
+            <p>Bienvenido a mi sitio web.</p>
+        </div>
+    );
+};
+
+export default HomePage;
+
+----------------------------------------
+
+// src/components/Layout.jsx:
+
+import React from 'react';
+
+import Navbar from './Navbar';
+import Terminal from './Terminal';
+import MainContent from './MainContent';
+
+import "../pages/styles.css";
+import "../pages/google-fonts.css";
+
+const flexWrapperStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    flexGrow: 2,
+    justifyContent: 'space-evenly',
+  };
+
+const Layout = ({ children }) => {
+    return (
+        <div style={flexWrapperStyle}>
+            <nav className="mx-auto text-center">
+            <Navbar />
+            </nav>
+            {/* <div className="terminal">
+                <Terminal />
+            </div>
+            <div className="centered-box">
+                <MainContent />
+            </div> */}
+        </div>
+    );
+};
+
+export default Layout;
+
+----------------------------------------
+
+// src/components/Header.jsx:
+
+import React from 'react';
+import "../pages/styles.css";
+
+const headerStyles = {
+  container: {
+    marginTop: '2rem',
+    textAlign: 'center',
+  },
+  title: {
+    fontSize: '4rem',
+    fontWeight: 400,
+    fontFamily: 'Jost, sans-serif',
+    color: '#2c3e50',
+    cursor: 'default',
+    transition: 'color 0.3s',
+  },
+  titleHover: {
+    backgroundImage: 'linear-gradient(90deg, #f4d444, #f86ca7, #8dd0fc)',
+    WebkitBackgroundClip: 'text',
+    backgroundClip: 'text',
+    color: 'transparent',
+    cursor: 'default',
+  },
+};
+
+const Header = () => {
+  const handleTitleHover = (e) => {
+    e.target.style.color = 'transparent';
+  };
+
+  const handleTitleLeave = (e) => {
+    e.target.style.color = headerStyles.title.color;
+  };
+
+  return (
+    <header style={headerStyles.container}>
+      <h1
+        className="title"
+        style={headerStyles.title}
+        onMouseEnter={handleTitleHover}
+        onMouseLeave={handleTitleLeave}
+      >
+        ALEX ARROYO
+      </h1>
+      <div className="custom-border"></div>
+    </header>
+  );
+};
+
+export default Header;
+
+----------------------------------------
+
+// src/components/Navbar.jsx:
+
+import React from 'react';
+import '../pages/styles.css';
+
+const Navbar = () => {
+  return (
+    <nav className="container text-center">
+      <ul className="hidden lg:flex justify-between">
+        <li
+          className="nav-item me-1"
+          style={{
+            marginRight: "50px",
+            marginTop: "10px",
+            marginBottom: "10px",
+          }}
+        >
+          <a className="nav-link active">ABOUT</a>
+        </li>
+        <li
+          className="nav-item-hover nav-item me-1"
+          style={{
+            marginRight: "50px",
+            marginTop: "10px",
+            marginBottom: "10px",
+          }}
+        >
+          <a className="nav-link" href="dev.html">
+            PROJECTS
+          </a>
+        </li>
+        <li
+          className="nav-item-hover nav-item me-1"
+          style={{
+            marginRight: "50px",
+            marginTop: "10px",
+            marginBottom: "10px",
+          }}
+        >
+          <a className="nav-link" href="texts.html">
+            WRITINGS
+          </a>
+        </li>
+        <li
+          className="nav-item-hover nav-item"
+          style={{
+            marginRight: "0",
+            marginTop: "10px",
+            marginBottom: "10px",
+          }}
+        >
+          <a className="nav-link" href="more.html">
+            CONTACT
+          </a>
+        </li>
+      </ul>
+    </nav>
+  );
+};
+
+export default Navbar;
+
+----------------------------------------
+
+// src/pages/styles.css:
+
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
@@ -110,7 +315,7 @@ nav a.nav-link.active {
 
 .nav-item-hover:hover:not(.nav-item.active) {
     transform: scale(1.15);
-    transition: transform 0.2s ease;
+    transition: transform 0.1s ease;
   }
 
 .nav-link:hover {
@@ -356,3 +561,6 @@ button {
 button:hover {
     color: #ff6767;
 }
+
+----------------------------------------
+

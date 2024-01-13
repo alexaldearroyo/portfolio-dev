@@ -20,17 +20,17 @@ const Navbar = () => {
       </button>
 
       {/* Menú para pantallas grandes y pequeñas */}
-      <ul className={`${isMenuOpen ? 'block' : 'hidden'} lg:flex justify-between`}>
-        <li className="nav-item mt-4 mb-5 lg:mt-2 lg:mb-0 lg:mr-12">
+      <ul className={`${isMenuOpen ? 'block' : 'hidden'} lg:flex justify-evenly`}>
+        <li className="nav-item mt-4 mb-5 lg:mt-2 lg:mb-0">
           <a className="nav-link active">ABOUT</a>
         </li>
-        <li className="nav-item-hover nav-item mt-4 mb-5 lg:mt-2 lg:mb-0 lg:mr-12">
+        <li className="nav-item-hover nav-item mt-4 mb-5 lg:mt-2 lg:mb-0">
           <a className="nav-link" href="dev.html">PROJECTS</a>
         </li>
-        <li className="nav-item-hover nav-item mt-4 mb-5 lg:mt-2 lg:mb-0 lg:mr-12">
+        <li className="nav-item-hover nav-item mt-4 mb-5 lg:mt-2 lg:mb-0">
           <a className="nav-link" href="texts.html">WRITINGS</a>
         </li>
-        <li className="nav-item-hover nav-item mt-4 mb-5 lg:mt-2 lg:mb-0">
+        <li className="nav-item-hover nav-item mt-4 mb-2 lg:mt-2 lg:mb-0">
           <a className="nav-link" href="more.html">CONTACT</a>
         </li>
       </ul>

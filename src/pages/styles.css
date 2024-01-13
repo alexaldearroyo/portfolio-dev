@@ -84,6 +84,7 @@ header, .centered-box, footer {
 .navbar-toggler-icon span {
     top: 50%;
     transform: translateY(-50%);
+    position: relative;
 }
 
 .collapse {
@@ -165,7 +166,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
     flex-grow: 2;
-    justify-content: space-between; /* Esto asegura que haya espacio equitativo entre los elementos */
+    justify-content: space-between;
 
 }
 

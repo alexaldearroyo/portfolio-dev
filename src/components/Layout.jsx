@@ -7,20 +7,13 @@ import MainContent from './MainContent';
 import "../pages/styles.css";
 import "../pages/google-fonts.css";
 
-const flexWrapperStyle = {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    flexGrow: 2,
-    justifyContent: 'space-evenly',
-  };
-
 const Layout = ({ children }) => {
     return (
-        <div style={flexWrapperStyle}>
+        <div className="flex-wrapper">
             <nav className="mx-auto text-center">
             <Navbar />
             </nav>
+            {children}
             {/* <div className="terminal">
                 <Terminal />
             </div>

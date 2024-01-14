@@ -16,6 +16,7 @@ html, body {
 }
 
 body {
+    overflow-y: scroll;
     display: flex;
     flex-direction: column;
     background-color: #fffbf0;
@@ -45,6 +46,7 @@ header, .centered-box, footer {
     background-clip: text;
     cursor: default;
 }
+
 
 /* MOBILE */
 
@@ -166,6 +168,10 @@ a:visited {
 
 a:hover {
     color: #ff6767;
+}
+
+a.no-link-dec:hover {
+    color: inherit;
 }
 
 .custom-border {
@@ -351,6 +357,8 @@ footer {
     padding: 2rem;  /* Cambia '30px' a la cantidad de padding que desees. */
     margin-top: auto;
     text-align: center;
+    height: 100px; /* Ajusta la altura del footer según sea necesario */
+
 }
 
 form {

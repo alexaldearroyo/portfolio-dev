@@ -1,37 +1,84 @@
-import React from 'react';
+import React, { useState } from "react";
+import "./projects.css";
 
 const ProjectsPage = () => {
-    return (
-        <div className="total-wrapper mx-auto mt-4">
-            <div className="grid-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {/* Bloque de contenido */}
-                <div className="centered-box-grid border border-gray-200 rounded-lg p-4 shadow">
-                    <div className="box-header font-bold text-lg mb-2 text-center">
-                        Priorities
-                    </div>
-                    <div className="box-content">
-                        <div className="preview text-sm">
-                            Keep track of your most important tasks at a glance!
-                            <p className="mt-3 flex justify-center">
-                                <img src="images/python.svg" alt="Python Logo" className="h-5 w-auto mr-2"/>
-                                Python
-                                <img src="images/qt.svg" alt="Qt Logo" className="h-5 w-auto ml-2"/>
-                                PyQt5
-                            </p>
-                        </div>
-                        <div className="expandible">
-                            {/* ... otros contenidos ... */}
-                        </div>
-                        <button className="toggle-content mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                            🞥
-                        </button>
-                    </div>
-                </div>
+  const [isExpanded, setIsExpanded] = useState(false);
 
-                {/* Repetir para otros bloques */}
+  const toggleExpandibleSection = () => {
+    setIsExpanded(!isExpanded);
+  };
+
+  return (
+    <div className="projects-page">
+      <div className="total-wrapper">
+        <div className="grid-wrapper">
+          {/* Bloque de contenido */}
+          <div className="centered-box-grid">
+            <div className="box-header">Priorities</div>
+            <div className={`box-content ${isExpanded ? "expanded" : ""}`}>
+              <div className="preview">
+                Keep track of your most important tasks at a glance!
+                <p className="mt-5 flex justify-center">
+                  <img
+                    src="python.svg"
+                    alt="Python Logo"
+                    className="h-5 w-auto mr-2"
+                  />
+                  Python
+                  <img
+                    src="qt.svg"
+                    alt="Qt Logo"
+                    className="h-5 w-auto ml-2 mr-2"
+                  />
+                  PyQt5
+                </p>
+              </div>
+
+              {isExpanded && (
+                <div className="expandible">
+                  <div className="inner-text-dev">
+                    <img
+                        src="https://raw.githubusercontent.com/alexaldearroyo/priorities/main/screenshots_tr.png"
+                        alt="Priorities Screenshot"
+                        className="w-full h-auto mx-auto mb-4 block"
+                    />
+                    <p className="pt-0 pb-4">
+                      "Priorities" is a task management application for macOS
+                      with a color-changing interface based on task count: blue
+                      for few tasks, yellow for some, and red for many. It
+                      features a user-friendly interface supporting both mouse
+                      and keyboard navigation, along with a text-editing
+                      function for easy task modifications.
+                    </p>
+
+                    <p className="pt-3 text-center">
+                        <a
+                            href="https://github.com/alexaldearroyo/priorities"
+                            target="_blank"
+                        >
+                            <span className="arrow no-hover">&gt;</span> More info on GitHub
+                        </a>
+                    </p>
+                  </div>
+                </div>
+              )}
+
+              <div className="flex justify-center">
+                <button
+                  onClick={toggleExpandibleSection}
+                  className="toggle-content"
+                >
+                  {isExpanded ? "-" : "+"}
+                </button>
+              </div>
             </div>
+          </div>
+
+          {/* Repetir para otros bloques */}
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default ProjectsPage;

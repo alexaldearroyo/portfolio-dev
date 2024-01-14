@@ -22,6 +22,8 @@ body {
     background-color: #fffbf0;
 }
 
+
+
 header h1 {
     color: #B58900;
     margin-top: 25px;
@@ -101,7 +103,7 @@ header, .centered-box, footer {
     transition: transform 0.3s ease;
   }
   
-  .nav-link:hover:not(.active) {
+  .nav-link:hover {
     transform: scale(2);
   }
   
@@ -170,9 +172,7 @@ a:hover {
     color: #ff6767;
 }
 
-a.no-link-dec:hover {
-    color: inherit;
-}
+
 
 .custom-border {
     border-bottom: 2px solid #2c3e50;

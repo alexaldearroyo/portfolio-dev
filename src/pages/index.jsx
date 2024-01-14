@@ -1,5 +1,7 @@
 import React from "react";
 import Head from "next/head";
+import Link from "next/link";
+
 import SocialLinks from "@/components/SocialLinks";
 
 const HomePage = () => {
@@ -12,15 +14,15 @@ const HomePage = () => {
           </p>
         </div>
         <div className="centered-box">
-          <p>
-            I work as a{" "}
-            <a className="no-link-dec" href="dev.html">
-              <span className="highlight">
-                software engineer and full-stack web developer
-              </span>
-            </a>
-            .
-          </p>
+        <p>
+  I work as a{" "}
+  <Link href="/projects" className="no-link-dec">
+    <span className="highlight">
+      software engineer and full-stack web developer
+    </span>
+  </Link>
+  .
+</p>
 
           <p>I express ideas through code, design, and stories.</p>
           <p>

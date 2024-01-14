@@ -2,20 +2,29 @@ import React, { useState } from "react";
 import "./projects.css";
 
 const ProjectsPage = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
 
-  const toggleExpandibleSection = () => {
-    setIsExpanded(!isExpanded);
+  const [expandedStates, setExpandedStates] = useState({
+    priorities: false,
+    visualGit: false,
+    // Agrega más estados si tienes más elementos
+  });
+
+  const toggleExpandibleSection = (element) => {
+    setExpandedStates((prevState) => ({
+      ...prevState,
+      [element]: !prevState[element],
+    }));
   };
 
   return (
     <div className="projects-page">
       <div className="total-wrapper">
         <div className="grid-wrapper">
+
           {/* PRIORITIES */}
           <div className="centered-box-grid">
             <div className="box-header">Priorities</div>
-            <div className={`box-content ${isExpanded ? "expanded" : ""}`}>
+            <div className={`box-content ${expandedStates.priorities ? "expanded" : ""}`}>
               <div className="preview">
                 Keep track of your most important tasks at a glance!
                 <p className="mt-5 flex justify-center">
@@ -34,7 +43,7 @@ const ProjectsPage = () => {
                 </p>
               </div>
 
-              {isExpanded && (
+              {expandedStates.priorities && (
                 <div className="expandible">
                   <div className="inner-text-dev">
                     <img
@@ -66,10 +75,10 @@ const ProjectsPage = () => {
 
               <div className="flex justify-center">
                 <button
-                  onClick={toggleExpandibleSection}
+                  onClick={() => toggleExpandibleSection("priorities")}
                   className="toggle-content"
                 >
-                  {isExpanded ? "-" : "+"}
+                  {expandedStates.priorities ? "-" : "+"}
                 </button>
               </div>
             </div>
@@ -79,7 +88,7 @@ const ProjectsPage = () => {
 
           <div class="centered-box-grid">
             <div class="box-header">Visual Git</div>
-            <div className={`box-content ${isExpanded ? "expanded" : ""}`}>
+            <div className={`box-content ${expandedStates.visualGit ? "expanded" : ""}`}>
               <div class="preview">
                 Git and GitHub made simpler through command line menus.
                 <p className="mt-5 flex justify-center">
@@ -97,7 +106,7 @@ const ProjectsPage = () => {
                   Bash
                 </p>
               </div>
-              {isExpanded && (
+              {expandedStates.visualGit && (
                 <div class="expandible">
                   <div class="inner-text-dev">
                     <img
@@ -125,10 +134,10 @@ const ProjectsPage = () => {
               )}
               <div className="flex justify-center">
                 <button
-                  onClick={toggleExpandibleSection}
+                  onClick={() => toggleExpandibleSection("visualGit")}
                   className="toggle-content"
                 >
-                  {isExpanded ? "-" : "+"}
+                  {expandedStates.visualGit ? "-" : "+"}
                 </button>
               </div>{" "}
             </div>

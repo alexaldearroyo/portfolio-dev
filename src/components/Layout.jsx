@@ -2,7 +2,7 @@ import React from 'react';
 
 import Navbar from './Navbar';
 import Terminal from './Terminal';
-import MainContent from './MainContent';
+import MainContent from './CenteredBox';
 import Footer from './Footer';
 
 import "../pages/styles.css";

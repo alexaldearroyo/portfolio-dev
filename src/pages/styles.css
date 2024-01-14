@@ -43,6 +43,7 @@ header, .centered-box, footer {
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
+    cursor: default;
 }
 
 /* MOBILE */
@@ -93,21 +94,41 @@ header, .centered-box, footer {
 
 /* DESKTOP */
 
+.nav-link {
+    /* estilos básicos de nav-link */
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-link:hover:not(.active) {
+    transform: scale(2);
+  }
+  
+  .nav-link.active {
+    color: #2c3e50;
+    cursor: default;
+  }
+  
+
 nav a.nav-link {
     color: #0087b5;
     font-size: 1.2rem;
     font-family: 'Jost', sans-serif;
 }
 
+.nav-item span {
+    color: #0087b5;
+    font-size: 1.2rem;
+    font-family: 'Jost', sans-serif;
+}
 
 nav a.nav-link.active {
     color: #2c3e50;
     cursor: default;
 }
 
-.nav-link.active:hover {
+/* .nav-link.active:hover {
     transform: none;
-}
+} */
 
 .nav-item-hover:hover:not(.nav-item.active) {
     transform: scale(1.15);
@@ -181,7 +202,7 @@ a:hover {
     background-color: #2c3e50;
     padding: 15px;
     /* border-radius: 5px; */
-    margin-top: 1.25rem;
+    margin-top: 1rem;
     box-sizing: border-box;
     width: 90%;
     text-align: center;
@@ -367,3 +388,19 @@ button {
 button:hover {
     color: #ff6767;
 }
+
+/* Añade una clase para controlar la transición del menú abierto */
+.menu-open {
+    max-height: 1000px; /* Ajusta la altura máxima según sea necesario */
+    opacity: 1;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Ajusta la duración aquí */
+  }
+  
+  /* Añade una clase para controlar la transición del menú cerrado */
+  .menu-closed {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Ajusta la duración aquí */
+  }
+  

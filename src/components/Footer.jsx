@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer>
-      <span>&copy; Alex Arroyo 2023</span>
+      <span>&copy; Alex Arroyo 2024</span>
     </footer>
   );
 };

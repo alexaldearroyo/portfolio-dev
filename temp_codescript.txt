@@ -1,154 +1,30 @@
-// src/pages/_app.jsx:
-
-import React from "react";
-import Layout from "../components/Layout";
-import Header from "../components/Header";
-import "./styles.css";
-
-import "./google-fonts.css";
-
-// Importa otros componentes de diseño aquí, si los tienes.
-
-function MyApp({ Component, pageProps }) {
-  return (
-    <>
-      <Header />
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </>
-  );
-}
-
-export default MyApp;
-
-----------------------------------------
-
-// src/pages/index.jsx:
-
-import React from 'react';
-// import './styles.css';
-
-const HomePage = () => {
-    // Tu contenido de la página de inicio aquí
-    return (
-        <div>
-            <h1>Mi página de inicio</h1>
-            <p>Bienvenido a mi sitio web.</p>
-        </div>
-    );
-};
-
-export default HomePage;
-
-----------------------------------------
-
-// src/components/Layout.jsx:
-
-import React from 'react';
-
-import Navbar from './Navbar';
-import Terminal from './Terminal';
-import MainContent from './MainContent';
-
-import "../pages/styles.css";
-import "../pages/google-fonts.css";
-
-const flexWrapperStyle = {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    flexGrow: 2,
-    justifyContent: 'space-evenly',
-  };
-
-const Layout = ({ children }) => {
-    return (
-        <div style={flexWrapperStyle}>
-            <nav className="mx-auto text-center">
-            <Navbar />
-            </nav>
-            {/* <div className="terminal">
-                <Terminal />
-            </div>
-            <div className="centered-box">
-                <MainContent />
-            </div> */}
-        </div>
-    );
-};
-
-export default Layout;
-
-----------------------------------------
-
-// src/components/Header.jsx:
-
-import React from 'react';
-import "../pages/styles.css";
-
-const headerStyles = {
-  container: {
-    marginTop: '2rem',
-    textAlign: 'center',
-  },
-  title: {
-    fontSize: '4rem',
-    fontWeight: 400,
-    fontFamily: 'Jost, sans-serif',
-    color: '#2c3e50',
-    cursor: 'default',
-    transition: 'color 0.3s',
-  },
-  titleHover: {
-    backgroundImage: 'linear-gradient(90deg, #f4d444, #f86ca7, #8dd0fc)',
-    WebkitBackgroundClip: 'text',
-    backgroundClip: 'text',
-    color: 'transparent',
-    cursor: 'default',
-  },
-};
-
-const Header = () => {
-  const handleTitleHover = (e) => {
-    e.target.style.color = 'transparent';
-  };
-
-  const handleTitleLeave = (e) => {
-    e.target.style.color = headerStyles.title.color;
-  };
-
-  return (
-    <header style={headerStyles.container}>
-      <h1
-        className="title"
-        style={headerStyles.title}
-        onMouseEnter={handleTitleHover}
-        onMouseLeave={handleTitleLeave}
-      >
-        ALEX ARROYO
-      </h1>
-      <div className="custom-border"></div>
-    </header>
-  );
-};
-
-export default Header;
-
-----------------------------------------
-
 // src/components/Navbar.jsx:
 
-import React, { useState } from 'react';
-import '../pages/styles.css';
+import React, { useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import "../pages/styles.css";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const router = useRouter(); // Llamada al hook useRouter
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Determina qué clase aplicar al menú solo en pantallas estrechas
+  const menuClass = isMenuOpen ? "menu-open" : "menu-closed";
+
+  const isActive = (path) => {
+    return router.pathname === path;
+  };
+
+  const activeLinkStyle = {
+    color: '#2c3e50',
+    cursor: 'default'
+  };
+  
   return (
     <nav className="container mx-auto text-center">
       {/* Botón para pantallas pequeñas */}
@@ -160,19 +36,67 @@ const Navbar = () => {
         <span className="navbar-toggler-icon"></span>
       </button>
 
-      {/* Menú para pantallas grandes y pequeñas */}
-      <ul className={`${isMenuOpen ? 'block' : 'hidden'} lg:flex justify-between`}>
-        <li className="nav-item mt-4 mb-2 lg:mt-2 lg:mb-0 lg:mr-12">
-          <a className="nav-link active">ABOUT</a>
+      {/* Menú para pantallas estrechas */}
+      <ul className={`lg:hidden ${menuClass} justify-evenly`}>
+        <li
+          className={`nav-item mt-4 mb-5 lg:mt-2 lg:mb-0 ${
+            isActive("/") ? "active" : ""
+          }`}
+        >
+          <Link href="/" passHref>
+          <span className="nav-link" style={isActive("/") ? activeLinkStyle : null}>ABOUT</span>
+          </Link>{" "}
         </li>
-        <li className="nav-item-hover nav-item mt-4 mb-2 lg:mt-2 lg:mb-0 lg:mr-12">
-          <a className="nav-link" href="dev.html">PROJECTS</a>
+        <li
+          className={`nav-item-hover nav-item mt-4 mb-5 lg:mt-2 lg:mb-0 ${
+            isActive("/projects") ? "active" : ""
+          }`}
+        >
+          <Link href="/projects" passHref>
+            <span className="nav-link">PROJECTS</span>
+          </Link>
         </li>
-        <li className="nav-item-hover nav-item mt-4 mb-2 lg:mt-2 lg:mb-0 lg:mr-12">
-          <a className="nav-link" href="texts.html">WRITINGS</a>
+        <li className="nav-item-hover nav-item mt-4 mb-5 lg:mt-2 lg:mb-0">
+          <a className="nav-link" href="texts.html">
+            WRITINGS
+          </a>
         </li>
         <li className="nav-item-hover nav-item mt-4 mb-2 lg:mt-2 lg:mb-0">
-          <a className="nav-link" href="more.html">CONTACT</a>
+          <a className="nav-link" href="more.html">
+            CONTACT
+          </a>
+        </li>
+      </ul>
+
+      {/* Menú para pantallas anchas */}
+      <ul className="hidden lg:flex justify-evenly">
+        <li
+          className={`nav-item mt-4 mb-5 lg:mt-2 lg:mb-1 ${
+            isActive("/") ? "active" : ""
+          }`}
+        >
+          <Link href="/" passHref>
+          <span className="nav-link" style={isActive("/") ? activeLinkStyle : null}>ABOUT</span>
+          </Link>{" "}
+        </li>
+        <li
+          className={`nav-item-hover nav-item mt-4 mb-5 lg:mt-2 lg:mb-1 ${
+            isActive("/projects") ? "active" : ""
+          }`}
+        >
+          <Link href="/projects" passHref>
+          <span className="nav-link" style={isActive("/projects") ? activeLinkStyle : null}>PROJECTS</span>
+          </Link>
+        </li>
+        <li className="nav-item-hover nav-item mt-4 mb-5 lg:mt-2 lg:mb-1">
+          <Link href="/writings" passHref>
+            <span className="nav-link">WRITINGS</span>
+          </Link>
+        </li>
+        <li className="nav-item-hover nav-item mt-4 mb-2 lg:mt-2 lg:mb-1">
+          <a className="nav-link" href="more.html">
+            CONTACT
+          </a>
         </li>
       </ul>
     </nav>
@@ -230,6 +154,7 @@ header, .centered-box, footer {
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
+    cursor: default;
 }
 
 /* MOBILE */
@@ -280,12 +205,33 @@ header, .centered-box, footer {
 
 /* DESKTOP */
 
+.nav-link {
+    /* estilos básicos de nav-link */
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    /* efecto de hover, por ejemplo, hacer el enlace más grande */
+    transform: scale(2);
+  }
+  
+  .nav-link.active {
+    color: #2c3e50;
+    cursor: default;
+  }
+  
+
 nav a.nav-link {
     color: #0087b5;
     font-size: 1.2rem;
     font-family: 'Jost', sans-serif;
 }
 
+.nav-item span {
+    color: #0087b5;
+    font-size: 1.2rem;
+    font-family: 'Jost', sans-serif;
+}
 
 nav a.nav-link.active {
     color: #2c3e50;
@@ -353,7 +299,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
     flex-grow: 2;
-    justify-content: space-between; /* Esto asegura que haya espacio equitativo entre los elementos */
+    justify-content: space-evenly;
 
 }
 
@@ -438,7 +384,7 @@ a:hover {
     flex-grow: 1;
     margin: 2rem 0;
     width: 90%;
-    padding: 40px;
+    padding: 50px;
     max-height: calc(100% - 100px - [header height] - [footer height]);
     min-height: 100px;
     background-color: #fff;
@@ -463,8 +409,12 @@ p {
     font-family: 'Roboto Mono', monospace;
     font-size: 1.1rem;
     color: #2c3e50;
-
 }
+
+.centered-box p {
+    margin-bottom: 15px;
+}
+
 
 .highlight {
     font-family: 'Roboto Mono', monospace;
@@ -479,6 +429,12 @@ p {
 .highlight:hover {
     transform: scale(1.01);
 }
+
+.social-icons-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+  }
 
 .social-icon img {
     height: 2rem;
@@ -545,5 +501,20 @@ button:hover {
     color: #ff6767;
 }
 
+/* Añade una clase para controlar la transición del menú abierto */
+.menu-open {
+    max-height: 1000px; /* Ajusta la altura máxima según sea necesario */
+    opacity: 1;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Ajusta la duración aquí */
+  }
+  
+  /* Añade una clase para controlar la transición del menú cerrado */
+  .menu-closed {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Ajusta la duración aquí */
+  }
+  
 ----------------------------------------
 

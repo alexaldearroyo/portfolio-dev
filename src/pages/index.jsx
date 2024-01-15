@@ -1,6 +1,4 @@
 import React from "react";
-import Head from "next/head";
-import { Link } from 'react-router-dom';
 import CenteredBox from "@/components/CenteredBox";
 import SocialLinks from "@/components/SocialLinks";
 

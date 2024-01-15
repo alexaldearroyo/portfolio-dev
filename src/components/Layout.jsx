@@ -1,8 +1,6 @@
 import React from 'react';
 
 import Navbar from './Navbar';
-import Terminal from './Terminal';
-import MainContent from './CenteredBox';
 import Footer from './Footer';
 
 const Layout = ({ children }) => {

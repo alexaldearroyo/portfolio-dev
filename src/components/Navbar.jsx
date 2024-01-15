@@ -10,6 +10,10 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   const menuClass = isMenuOpen ? "menu-open" : "menu-closed";
 
   const isActive = (path) => {
@@ -42,7 +46,7 @@ const Navbar = () => {
           }`}
         >
           <Link href="/" passHref>
-          <span className="nav-link" style={isActive("/") ? activeLinkStyle : null}>ABOUT</span>
+          <span className="nav-link" style={isActive("/") ? activeLinkStyle : null} onClick={closeMenu}>ABOUT</span>
           </Link>{" "}
         </li>
 
@@ -52,7 +56,7 @@ const Navbar = () => {
           }`}
         >
           <Link href="/projects" passHref>
-          <span className="nav-link" style={isActive("/projects") ? activeLinkStyle : null}>PROJECTS</span>
+          <span className="nav-link" style={isActive("/projects") ? activeLinkStyle : null} onClick={closeMenu}>PROJECTS</span>
           </Link>
         </li>
 
@@ -62,7 +66,7 @@ const Navbar = () => {
           }`}
         >
           <Link href="/writings" passHref>
-          <span className="nav-link" style={isActive("/writings") ? activeLinkStyle : null}>WRITINGS</span>
+          <span className="nav-link" style={isActive("/writings") ? activeLinkStyle : null} onClick={closeMenu}>WRITINGS</span>
           </Link>
         </li>
 
@@ -72,7 +76,7 @@ const Navbar = () => {
           }`}
         >
           <Link href="/contact" passHref>
-          <span className="nav-link" style={isActive("/contact") ? activeLinkStyle : null}>CONTACT</span>
+          <span className="nav-link" style={isActive("/contact") ? activeLinkStyle : null} onClick={closeMenu}>CONTACT</span>
           </Link>
         </li>
 

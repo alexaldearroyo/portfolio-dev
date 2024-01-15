@@ -10,7 +10,7 @@ const SocialLinks = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img src="/github.svg" alt="GitHub" />
+        <Image src="/github.svg" alt="GitHub" width={40} height={40} />
       </a>
 
       <a
@@ -19,7 +19,7 @@ const SocialLinks = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img src="/twitter.svg" alt="Twitter / X" />
+        <Image src="/twitter.svg" alt="Twitter / X" width={40} height={40} />
       </a>
 
       <a
@@ -28,7 +28,7 @@ const SocialLinks = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img src="/email.svg" alt="Email" />
+        <Image src="/email.svg" alt="Email" width={40} height={40} />
       </a>
     </div>
   );

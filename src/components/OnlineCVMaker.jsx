@@ -9,34 +9,41 @@ const OnlineCVMaker = ({ expanded, toggleExpandibleSection }) => {
         <div class="preview">
         Create and customize your professional resume effortlessly with Online CV Maker.
         <a href="https://online-cv-maker.vercel.app" target="_blank">
-
-        <img
-                src="ocvm.png"
-                alt="Online CV Maker Screenshot"
-                className="w-1/1.5 h-auto mx-auto mt-4 mb-5 block"
-                style={{ cursor: "pointer" }}
-              />
-          </a>
-          <p className="mt-5 flex justify-center flex-wrap custom-line-height">
-            <img
-              src="react_b.svg"
-              alt="React Logo"
-              className="h-5 w-auto mr-2"
-            />
-            React
-            <img
-              src="tailwind_b.svg"
-              alt="Tailwind Logo"
-              className="h-5 w-auto ml-2 mr-2"
-            />
-            Tailwind
-            <img
-              src="jest_b.svg"
-              alt="Jest Logo"
-              className="h-5 w-auto ml-2 mr-2"
-            />
-            Jest
-          </p>
+          <Image
+            src="/ocvm.png"
+            alt="Online CV Maker Screenshot"
+            width={600}
+            height={400}
+            className="mx-auto mt-4 mb-5 block"
+            style={{ cursor: "pointer" }}
+          />
+        </a>
+        <p className="mt-5 flex justify-center flex-wrap custom-line-height">
+          <Image
+            src="/react_b.svg"
+            alt="React Logo"
+            width={20}
+            height={20}
+            className="h-5 w-auto mr-2"
+          />
+          React
+          <Image
+            src="/tailwind_b.svg"
+            alt="Tailwind Logo"
+            width={20}
+            height={20}
+            className="h-5 w-auto ml-2 mr-2"
+          />
+          Tailwind
+          <Image
+            src="/jest_b.svg"
+            alt="Jest Logo"
+            width={20}
+            height={20}
+            className="h-5 w-auto ml-2 mr-2"
+          />
+          Jest
+        </p>
         </div>
 
         {expanded && (

@@ -418,4 +418,33 @@ button:hover {
     vertical-align: middle;
   }
   
+.hover-scale:hover {
+    transform: scale(1.5); 
+    transition: transform 1s ease;
+  }
+  
+  .svg-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 5px 0;
+    position: relative;
+  }
+  
+  .hover-text {
+    display: none;
+    width: max-content;
+    font-size: 0.65rem;
+    color: #0087b5;
+    margin-top: 0.5rem;
+    top: 100%;
+    left: 0%;
+    transform: translateX(-0%);
+    width: max-content; 
+  }
+  
+  .svg-icon:hover .hover-text {
+    display: block;
+  }
   

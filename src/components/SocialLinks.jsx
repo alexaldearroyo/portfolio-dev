@@ -1,5 +1,4 @@
 import React from "react";
-import '../pages/styles.css';
 import Image from 'next/image';
 
 const SocialLinks = () => {

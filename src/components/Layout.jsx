@@ -5,9 +5,6 @@ import Terminal from './Terminal';
 import MainContent from './CenteredBox';
 import Footer from './Footer';
 
-import "../pages/styles.css";
-import "../pages/google-fonts.css";
-
 const Layout = ({ children }) => {
     return (
         <div className="frame">

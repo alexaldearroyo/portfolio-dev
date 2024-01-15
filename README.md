@@ -7,6 +7,8 @@
 This portfolio project is a showcase of my work and skills. Built with Next.js.
 It's designed to be a dynamic and interactive way to present my projects and professional journey.
 
+![Screenshot](src/screenshots/screenshot.png)
+
 [Live preview](https://alexarroyo.vercel.app)
 
 ---

@@ -1,5 +1,6 @@
 import React from "react";
 import "../pages/projects"
+import Image from 'next/image';
 
 const MarkdownViewer = ({ expanded, toggleExpandibleSection }) => {
   return (

@@ -7,15 +7,26 @@ const Priorities = ({ expanded, toggleExpandibleSection }) => {
       <div className={`box-content ${expanded ? "expanded" : ""}`}>
         <div className="preview">
           Keep track of your most important tasks at a glance!
+
+          <a href="https://github.com/alexaldearroyo/priorities" target="_blank">
+            <img
+              src="p.png"
+              alt="Priorities Screenshot"
+              className="w-full h-auto mx-auto mb-4 block"
+              style={{ cursor: "pointer" }}
+            />
+          </a>
+              
           <p className="mt-5 flex justify-center">
             <img
-              src="python.svg"
+              src="python_b.svg"
               alt="Python Logo"
               className="h-5 w-auto mr-2"
+              fill="black"
             />
             Python
             <img
-              src="qt.svg"
+              src="qt_b.svg"
               alt="Qt Logo"
               className="h-5 w-auto ml-2 mr-2"
             />
@@ -26,11 +37,7 @@ const Priorities = ({ expanded, toggleExpandibleSection }) => {
         {expanded && (
           <div className="expandible">
             <div className="inner-text-dev">
-              <img
-                src="priorities.png"
-                alt="Priorities Screenshot"
-                className="w-full h-auto mx-auto mb-4 block"
-              />
+         
               <p className="pt-4 pb-4">
                 "Priorities" is a task management application for macOS
                 with a color-changing interface based on task count: blue

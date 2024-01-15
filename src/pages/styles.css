@@ -16,7 +16,7 @@ html, body {
 }
 
 body {
-    overflow-y: scroll;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     background-color: #fffbf0;
@@ -26,7 +26,7 @@ body {
 
 header h1 {
     color: #B58900;
-    margin-top: 25px;
+    margin-top: 5px;
 }
 
 header, .centered-box, footer {
@@ -175,7 +175,7 @@ a:hover {
 
 
 .custom-border {
-    border-bottom: 2px solid #2c3e50;
+    border-bottom: 1.5px solid #2c3e50;
     width: 100%;
     margin: 10px auto;
 }
@@ -186,7 +186,16 @@ a:hover {
     100% { opacity: 1; }
 }
 
+#ontop {
+    .flex-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-grow: 2;
+        /* justify-content: space-between; */ /* Comentar o eliminar esta línea */
+    }
 
+}
 
 .flex-wrapper {
     display: flex;
@@ -194,13 +203,12 @@ a:hover {
     align-items: center;
     flex-grow: 2;
     justify-content: space-evenly;
-
 }
 
 @media (min-width: 1000px) {
     .flex-wrapper, .terminal, .centered-box {
-        width: 70%; /* O cualquier otro porcentaje o valor fijo que prefieras */
-        margin: auto; /* Esto centrará los elementos en la ventana */
+        width: 70%;
+        margin: auto;
     }
 }
 
@@ -212,7 +220,7 @@ a:hover {
     box-sizing: border-box;
     width: 90%;
     text-align: center;
-    border: 2px solid #0087b5;
+    /* border: 2px solid #0087b5; */
 
 }
 
@@ -236,7 +244,7 @@ a:hover {
 .box-header {
     background-color: #fff7dc;
     /* font-weight: bold;  texto en negrita */
-    border-bottom: 2px solid #0087b5;
+    border-bottom: 1.5px solid #0087b5;
     margin-bottom: 0;
     margin: 0;
     padding: 5px;
@@ -256,10 +264,10 @@ a:hover {
 }
 
 .centered-box-win {
-    border: 2px solid #0087b5;
+    /* border: 2px solid #0087b5; */
     font-size: 20px;
     flex-grow: 1;
-    margin: 1.5rem 0;
+    margin: 1.2rem 0;
     width: 90%;
     padding: 0;
     background-color: #fff;
@@ -269,11 +277,10 @@ a:hover {
 #contact {
         background-color: #fff7dc;
         padding: 0;
-
 }
 
 .centered-box {
-    border: 2px solid #0087b5;
+    /* border: 2px solid #0087b5; */
     font-size: 20px;
     flex-grow: 1;
     margin: 2rem 0;
@@ -365,7 +372,7 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 40px 20px 40px;
+    padding: 15px 40px 40px 40px;
     box-sizing: border-box;
 }
 
@@ -376,8 +383,8 @@ label {
 }
 
 .form-control {
-    border-radius: 0; /* Ajusta este valor a tu preferencia para cambiar el radio de las esquinas */
-    border: 2px solid #0087b5; /* Ajusta el grosor y color del borde a tu preferencia */
+    border-radius: 0;
+    border: 1.5px solid #0087b5;
     font-family: 'Roboto Mono', monospace;
 
 }
@@ -411,4 +418,10 @@ button:hover {
     overflow: hidden;
     transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Ajusta la duración aquí */
   }
+  
+  .inline-block {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
   

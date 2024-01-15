@@ -10,7 +10,7 @@ import "../pages/google-fonts.css";
 
 const Layout = ({ children }) => {
     return (
-        <div>
+        <div className="frame">
             <nav className="mx-auto text-center">
             <Navbar />
             </nav>

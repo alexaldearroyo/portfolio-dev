@@ -9,7 +9,7 @@
 }
 
 html, body {
-    height: 100%;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
 
@@ -53,15 +53,15 @@ header, .centered-box, footer {
 /* MOBILE */
 
 .navbar-toggler {
-    border: none;  /* Elimina el borde del botón */
-    background: transparent;  /* Establece un fondo transparente */
+    border: none;
+    background: transparent;
     margin-bottom: 0.5rem;
 }
 
 .navbar-toggler-icon {
-    background-image: none;  /* Elimina la imagen de fondo SVG */
-    width: 30px;   /* Establece un ancho */
-    height: 15px;  /* Establece un alto */
+    background-image: none;
+    width: 30px;
+    height: 15px;
     display: inline-block;
     position: relative;
 }
@@ -71,9 +71,9 @@ header, .centered-box, footer {
 .navbar-toggler-icon span {
     content: "";
     display: block;
-    width: 100%;   /* Asegura que tenga el ancho completo */
-    height: 3px;   /* Altura de cada línea */
-    background-color: #2c3e50;  /* Color de las líneas */
+    width: 100%;
+    height: 3px;
+    background-color: #2c3e50;
     position: absolute;
     left: 0;
 }
@@ -98,8 +98,8 @@ header, .centered-box, footer {
 
 /* DESKTOP */
 
+
 .nav-link {
-    /* estilos básicos de nav-link */
     transition: transform 0.3s ease;
   }
   
@@ -130,10 +130,6 @@ nav a.nav-link.active {
     cursor: default;
 }
 
-/* .nav-link.active:hover {
-    transform: none;
-} */
-
 .nav-item-hover:hover:not(.nav-item.active) {
     transform: scale(1.15);
     transition: transform 0.2s ease;
@@ -146,17 +142,17 @@ nav a.nav-link.active {
 }
 
 a.highlight, a.highlight:link, a.highlight:visited {
-    color: #2c3e50; /* Ejemplo: hereda el color del texto circundante */
-    text-decoration: underline; /* Ejemplo: elimina el subrayado */
+    color: #2c3e50;
+    text-decoration: underline;
 }
 
 
 a.no-link-dec, a.no-link-dec:link, a.no-link-dec:visited {
-    color: inherit; /* Ejemplo: hereda el color del texto circundante */
+    color: inherit;
 }
 
 a.no-link-dec:hover {
-    color: #ff6767;      /* Color azul al hacer hover */
+    color: #ff6767;
 }
 
 a:link {
@@ -171,8 +167,6 @@ a:visited {
 a:hover {
     color: #ff6767;
 }
-
-
 
 .custom-border {
     border-bottom: 1.5px solid #2c3e50;
@@ -192,7 +186,8 @@ a:hover {
         flex-direction: column;
         align-items: center;
         flex-grow: 2;
-        /* justify-content: space-between; */ /* Comentar o eliminar esta línea */
+        justify-content: space-evenly;
+
     }
 
 }
@@ -206,9 +201,10 @@ a:hover {
 }
 
 @media (min-width: 1000px) {
-    .flex-wrapper, .terminal, .centered-box {
-        width: 70%;
-        margin: auto;
+    .flex-wrapper, .terminal, .centered-box, .frame {
+        min-width: 70%;
+        /* margin: auto; */
+        justify-content: space-evenly;
     }
 }
 
@@ -333,8 +329,8 @@ p {
 
 .social-icons-container {
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
+    justify-content: center;
+    align-items: center;
   }
 
 .social-icon img {
@@ -361,11 +357,10 @@ p {
 
 footer {
     color: #2c3e50;
-    padding: 2rem;  /* Cambia '30px' a la cantidad de padding que desees. */
-    margin-top: auto;
+    padding: 2rem;
+    /* margin-top: auto; */
     text-align: center;
-    height: 100px; /* Ajusta la altura del footer según sea necesario */
-
+    /* height: 100px; */
 }
 
 form {
@@ -404,19 +399,18 @@ button:hover {
     color: #ff6767;
 }
 
-/* Añade una clase para controlar la transición del menú abierto */
+
 .menu-open {
-    max-height: 1000px; /* Ajusta la altura máxima según sea necesario */
+    max-height: 1000px;
     opacity: 1;
-    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Ajusta la duración aquí */
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
   }
   
-  /* Añade una clase para controlar la transición del menú cerrado */
   .menu-closed {
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Ajusta la duración aquí */
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
   }
   
   .inline-block {

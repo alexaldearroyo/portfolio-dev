@@ -39,7 +39,7 @@ const Priorities = ({ expanded, toggleExpandibleSection }) => {
             <div className="inner-text-dev">
          
               <p className="pt-4 pb-4">
-                "Priorities" is a task management application for macOS
+                &quot;Priorities&quot; is a task management application for macOS
                 with a color-changing interface based on task count: blue
                 for few tasks, yellow for some, and red for many. It
                 features a user-friendly interface supporting both mouse

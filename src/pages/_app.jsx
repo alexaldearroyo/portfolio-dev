@@ -11,7 +11,6 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>Alex Arroyo</title>
         <link rel="icon" href="/favicon.ico" />
-        {/* Otros elementos que desees agregar al encabezado */}
       </Head>
       <Header />
       <Layout>

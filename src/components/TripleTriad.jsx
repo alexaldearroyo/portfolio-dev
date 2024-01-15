@@ -6,7 +6,7 @@ const TripleTriad = ({ expanded, toggleExpandibleSection }) => {
       <div className="box-header">Triple Triad Memory</div>
       <div className={`box-content ${expanded ? "expanded" : ""}`}>
         <div class="preview">
-        A nostalgic memory card game inspired by Final Fantasy's Triple Triad.
+        A nostalgic memory card game inspired by Final Fantasy&apos;s Triple Triad.
         <a href="https://tripletriadmemory.netlify.app" target="_blank">
 
         <img
@@ -48,7 +48,7 @@ const TripleTriad = ({ expanded, toggleExpandibleSection }) => {
               1. Click on a card to reveal its image.<br></br>
               2. Click on another card to find a matching pair.<br></br>
               3. If the cards match, they will remain face-up.<br></br>
-              4. If they don't match, they will be flipped face-down again.<br></br>
+              4. If they don&apos;t match, they will be flipped face-down again.<br></br>
               5. Keep matching pairs until all cards are face-up to win the game.
               </p>
               <p class="pt-3 text-center">

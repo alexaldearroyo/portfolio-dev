@@ -1,7 +1,6 @@
 import React from "react";
 import '../pages/styles.css';
 
-
 const SocialLinks = () => {
   return (
     <div className="container mx-auto text-center link-container social-icons-container">
@@ -11,7 +10,7 @@ const SocialLinks = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img src="/github.svg" alt="GitHub" /> {/* Ruta relativa desde la carpeta 'public' */}
+        <img src="/github.svg" alt="GitHub" />
       </a>
 
       <a
@@ -20,7 +19,7 @@ const SocialLinks = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img src="/twitter.svg" alt="Twitter / X" /> {/* Ruta relativa desde la carpeta 'public' */}
+        <img src="/twitter.svg" alt="Twitter / X" />
       </a>
 
       <a
@@ -29,7 +28,7 @@ const SocialLinks = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img src="/email.svg" alt="Email" /> {/* Ruta relativa desde la carpeta 'public' */}
+        <img src="/email.svg" alt="Email" />
       </a>
     </div>
   );

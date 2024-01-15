@@ -168,7 +168,9 @@ function CenteredBox() {
       <p>
         – I am a creative type, so I make some{" "}
         <a className="no-link-dec" href="https://alexarroyo-art.vercel.app/">
-          <span className="highlight">art</span>
+          <span className="highlight">
+            art
+            </span>
         </a>
         {" "}and music too.
       </p>

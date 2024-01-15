@@ -14,7 +14,9 @@ const Layout = ({ children }) => {
             <nav className="mx-auto text-center">
             <Navbar />
             </nav>
+            <div className="flex-wrapper">
             {children}
+            </div>
             <Footer />
         </div>
     );

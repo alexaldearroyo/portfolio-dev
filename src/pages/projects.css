@@ -3,7 +3,6 @@
 .preview {
     margin-bottom: 5px;
     padding-top: 10px;
-    /* padding-bottom: 10px; */
     text-align: center;
 }
 
@@ -59,27 +58,18 @@
 }
 
 .toggle-content {
-    font-size: 2rem;  /* Ajusta el tamaño según sea necesario */
-    font-weight: bold; /* Hace el texto en negrita */
-    /* curso de puntero en */
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 
 .grid-wrapper {
     display: grid;
-    /* grid-template-columns: repeat(1, 1fr); */
     gap: 30px;
     padding-top: 0;
     padding-left: 40px;
     padding-right: 40px;
     padding-bottom: 20px;
-    /* height: 100%; */
-    /* width: 100%; */
-    /* align-items: stretch; */
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-
 }
 
 
@@ -128,6 +118,6 @@ p {
 }
 
 .custom-line-height {
-    line-height: 1.75; /* Ajusta este valor según tus necesidades */
+    line-height: 1.75;
   }
   

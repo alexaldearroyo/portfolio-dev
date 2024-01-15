@@ -59,7 +59,7 @@ const PrioritiesOnline = ({ expanded, toggleExpandibleSection }) => {
                 that helps you stay organized and focused. This app allows users
                 to categorize tasks by priority, bundle them into projects, and
                 keep track of deadlines with an integrated calendar feature.
-                It's the perfect tool for anyone from students to professionals
+                It&apos;s the perfect tool for anyone from students to professionals
                 seeking to optimize their time and effort with a clear,
                 priorities-driven approach.
               </p>

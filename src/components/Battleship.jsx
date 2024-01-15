@@ -6,17 +6,19 @@ const Battleship = ({ expanded, toggleExpandibleSection }) => {
       <div className="box-header">Battleship Game</div>
       <div className={`box-content ${expanded ? "expanded" : ""}`}>
         <div class="preview">
-        Play online the classic Battleship game. Carefully built with TypeScript and Webpack.
-        <a href="https://alexaldearroyo.github.io/battleship/" target="_blank">
-
-        <img
-                src="bs.png"
-                alt="Battleship Game Screenshot"
-                className="w-1/1.5 h-auto mx-auto mt-4 mb-5 block"
-                style={{ cursor: "pointer" }}
-
-              />
-                    </a>    
+          Play online the classic Battleship game. Carefully built with
+          TypeScript and Webpack.
+          <a
+            href="https://alexaldearroyo.github.io/battleship/"
+            target="_blank"
+          >
+            <img
+              src="bs.png"
+              alt="Battleship Game Screenshot"
+              className="w-1/1.5 h-auto mx-auto mt-4 mb-5 block"
+              style={{ cursor: "pointer" }}
+            />
+          </a>
           <p className="mt-5 flex justify-center flex-wrap custom-line-height">
             <img
               src="ts_b.svg"
@@ -38,13 +40,15 @@ const Battleship = ({ expanded, toggleExpandibleSection }) => {
             Jest
           </p>
         </div>
-
         {expanded && (
           <div class="expandible">
             <div class="inner-text-dev">
-              
               <p class="pt-4 pb-4">
-              Battleship Game is a classic two-player strategy board game implemented as a web application. In this game, players take turns to guess the locations of their opponent's fleet of ships and attempt to sink them. The player who sinks all of their opponent's ships first wins the game.
+                Battleship Game is a classic two-player strategy board game
+                implemented as a web application. In this game, players take
+                turns to guess the locations of their opponent&apos;s fleet of ships
+                and attempt to sink them. The player who sinks all of their
+                opponent&apos;s ships first wins the game.
               </p>
               <p class="pt-3 text-center">
                 <a

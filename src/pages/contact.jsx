@@ -56,7 +56,7 @@ const ContactForm = () => {
 
 const Contact = () => {
   return (
-    <div className="flex-wrapper" id="ontop">
+    <div className="flex-wrapper">
       <Terminal />
       <ContactForm />
     </div>

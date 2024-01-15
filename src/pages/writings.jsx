@@ -14,7 +14,6 @@ const BlogPost = ({title, link }) => {
   );
 };
 
-
 const MonthHeader = ({ month }) => {
   return (
       <div className="box-header">
@@ -28,6 +27,7 @@ const BlogList = () => {
     <div className="flex-wrapper">
 
     <div className="centered-box-win">
+      
       <MonthHeader month="November 2023" />
       <BlogPost
         month="November 2023"

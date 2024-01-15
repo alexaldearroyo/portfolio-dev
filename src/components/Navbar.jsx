@@ -80,7 +80,8 @@ const Navbar = () => {
       </ul>
 
       {/* DESKTOP MENU */}
-      <ul className="hidden lg:flex justify-evenly">
+
+      <ul className="hidden lg:flex justify-evenly space-evenly">
 
         <li
           className={`nav-item-hover nav-item mt-4 mb-5 lg:mt-2 lg:mb-1 ${

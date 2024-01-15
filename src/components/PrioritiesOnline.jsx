@@ -57,7 +57,7 @@ const PrioritiesOnline = ({ expanded, toggleExpandibleSection }) => {
           <div className="expandible">
             <div className="inner-text-dev">
               <p className="pt-4 pb-4">
-                Priorities Online is a web-based task management application that helps you stay organized and focused. This app allows users to categorize tasks by priority, bundle them into projects, and keep track of deadlines with an integrated calendar feature. It's the perfect tool for anyone from students to professionals seeking to optimize their time and effort with a clear, priorities-driven approach.
+                Priorities Online is a web-based task management application that helps you stay organized and focused. This app allows users to categorize tasks by priority, bundle them into projects, and keep track of deadlines with an integrated calendar feature. It&apos;s the perfect tool for anyone from students to professionals seeking to optimize their time and effort with a clear, priorities-driven approach.
               </p>
               <p className="pt-3 text-center">
                 <a

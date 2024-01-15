@@ -54,7 +54,7 @@ const TripleTriad = ({ expanded, toggleExpandibleSection }) => {
                 1. Click on a card to reveal its image.<br></br>
                 2. Click on another card to find a matching pair.<br></br>
                 3. If the cards match, they will remain face-up.<br></br>
-                4. If they don't match, they will be flipped face-down again.<br></br>
+                4. If they don&apos;t match, they will be flipped face-down again.<br></br>
                 5. Keep matching pairs until all cards are face-up to win the game.
               </p>
               <p className="pt-3 text-center">

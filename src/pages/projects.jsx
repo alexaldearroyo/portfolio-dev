@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./projects.css";
+import Townwall from "../components/Townwall";
 import Priorities from "../components/Priorities";
 import VisualGit from "../components/VisualGit";
 import MarkdownViewer from "../components/MarkdownViewer";
@@ -28,6 +28,12 @@ const ProjectsPage = () => {
     <div className="projects-page">
       <div className="total-wrapper">
         <div className="grid-wrapper">
+
+          <Townwall
+            expanded={expandedStates.priorities}
+            toggleExpandibleSection={toggleExpandibleSection}
+          />
+
           <Priorities
             expanded={expandedStates.priorities}
             toggleExpandibleSection={toggleExpandibleSection}
@@ -72,7 +78,7 @@ const ProjectsPage = () => {
             expanded={expandedStates.ArtPortfolio}
             toggleExpandibleSection={toggleExpandibleSection}
           />
-          
+
         </div>
       </div>
     </div>

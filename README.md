@@ -13,4 +13,4 @@ It's designed to be a dynamic and interactive way to present my projects and pro
 
 ---
 
-© 2023-2024 Alex Arroyo
+© 2023-2025 Alex Arroyo

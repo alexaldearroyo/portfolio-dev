@@ -8,7 +8,7 @@ function CenteredBox() {
         — I am a{" "}
         <a className="no-link-dec" href="projects">
           <span className="highlight">
-            software engineer and full-stack web developer
+            Full Stack Web Developer
           </span>
         </a>
         .

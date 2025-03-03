@@ -19,12 +19,19 @@ const Townwall = ({ expanded, toggleExpandibleSection }) => {
             />
           </a>
           <p className="mt-5 flex justify-center">
+          <Image
+              src="/ts_b.svg"
+              alt="TypeScript Logo"
+              width={20}
+              height={20}
+              className="h-5 w-auto mr-2"
+            />
             <Image
               src="/react_b.svg"
               alt="React Logo"
               width={20}
               height={20}
-              className="h-5 w-auto mr-2"
+              className="h-5 w-auto ml-2"
             />
             React
             <Image

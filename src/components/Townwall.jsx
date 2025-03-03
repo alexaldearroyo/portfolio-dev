@@ -18,7 +18,7 @@ const Townwall = ({ expanded, toggleExpandibleSection }) => {
               style={{ cursor: "pointer" }}
             />
           </a>
-          <p className="mt-5 flex justify-center">
+          <p className="mt-5 flex justify-center flex-wrap custom-line-height">
           <Image
               src="/ts_b.svg"
               alt="TypeScript Logo"

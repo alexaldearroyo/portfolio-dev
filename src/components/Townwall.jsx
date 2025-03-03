@@ -24,14 +24,15 @@ const Townwall = ({ expanded, toggleExpandibleSection }) => {
               alt="TypeScript Logo"
               width={20}
               height={20}
-              className="h-5 w-auto mr-2"
+              className="h-5 w-auto mr-2 "
             />
+            Typescript
             <Image
               src="/react_b.svg"
               alt="React Logo"
               width={20}
               height={20}
-              className="h-5 w-auto ml-2"
+              className="h-5 w-auto ml-2 mr-2"
             />
             React
             <Image

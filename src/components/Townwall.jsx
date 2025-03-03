@@ -8,7 +8,7 @@ const Townwall = ({ expanded, toggleExpandibleSection }) => {
       <div className={`box-content ${expanded ? "expanded" : ""}`}>
         <div className="preview">
         A location-based social platform where users can share messages, posts, and events.
-          <a href="https://github.com/alexaldearroyo/Townwall" target="_blank">
+          <a href="https://townwall.fly.dev/" target="_blank">
             <Image
               src="/t.png"
               alt="Townwall Screenshot"

@@ -58,7 +58,7 @@ const Priorities = ({ expanded, toggleExpandibleSection }) => {
 
         <div className="flex justify-center">
           <button
-            onClick={() => toggleExpandibleSection("priorities")}
+            onClick={() => toggleExpandibleSection("Priorities")}
             className="toggle-content"
           >
             {expanded ? "-" : "+"}

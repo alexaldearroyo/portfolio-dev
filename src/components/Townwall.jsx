@@ -44,7 +44,7 @@ const Townwall = ({ expanded, toggleExpandibleSection }) => {
             />
             Next.js
             <Image
-              src="/sql.svg"
+              src="/postgres.svg"
               alt="PostgreSQL Logo"
               width={20}
               height={20}
